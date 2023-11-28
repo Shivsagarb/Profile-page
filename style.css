@@ -1,0 +1,222 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* :root{
+    --main-color:;
+    --card-color:;
+    --shadow-color:;
+    --color:;   
+} */
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color:rgb(22, 21, 21);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card{
+    padding: 2rem;
+    background-color: rgba(28, 27, 27, 0.6);
+    text-align: center;
+    border-radius: .5rem;
+    color: whitesmoke;
+    /* border: .1rem solid whitesmoke; */
+    z-index: 2;
+    backdrop-filter: blur(30px);
+}
+
+img{
+    border-radius: 50%;
+    padding: 2rem;
+}
+
+h1{
+    padding-bottom: 2rem;
+}
+
+.btn{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+    padding: 2rem;
+    gap: 1rem;   
+}
+
+button{
+    border-radius: .5rem;
+    padding: .3rem;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+button:hover{
+    cursor: pointer;
+    scale: 1.1;
+    box-shadow: 0 0 1rem aqua;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle1{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 40px red;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    z-index: 1;
+    animation: 5s ease-in 250ms infinite alternate none running left;
+}
+
+@keyframes left{
+    0%{
+        top: 10%;
+        left: 30%;
+    }
+    
+    100%{
+        top:20%;
+        left:25%;
+    }
+}
+
+.circle2{
+    width: 250px;
+    height: 250px;
+    background-color: blue;
+    border-radius: 50%;
+    box-shadow: 0 0 40px blue;
+    position: absolute;
+    bottom: 10%;
+    right: 30%;
+    z-index: 1;
+    animation: 5s ease-in 250ms infinite alternate none running right;
+}
+
+@keyframes right{
+    0%{
+        bottom: 10%;
+        right: 35%;
+    }
+    100%{
+        bottom: 8%;
+        right: 25%;
+    }
+}
+
+.modal{
+    border: 1px solid whitesmoke;
+    border-radius: .5rem;
+    padding: 2rem;
+    background-color: rgba(28, 27, 27, 0.6);
+    backdrop-filter: blur(30px);
+    width: 30rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    scale: 0; 
+    transition: 0.5s ease-in-out;
+    translate: -50% -50%;
+    z-index: 3;
+}
+
+.active{
+    scale: 1;
+}
+
+.overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #5f5f5f83;
+    transition: 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.overlayactive{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.header{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.socials{
+    padding: 1rem 0 ;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.icons{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1;
+}
+
+.ic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.ic:hover{
+    cursor: pointer;
+    scale: 1.2;
+}
+
+#ic1{
+    border: 1px solid  #253cef;
+}
+
+
+#ic2{
+    border: 1px solid  #0afbff ;
+}
+
+#ic3{
+    border: 1px solid   #f31273;
+}
+
+#ic4{
+    border: 1px solid  #1cd440 ;
+}
+
+#ic5{
+    border: 1px solid  black;
+}
+
+.para{
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: white;
+}
+
